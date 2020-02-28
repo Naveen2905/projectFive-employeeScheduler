@@ -13,11 +13,71 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFFFF;
   .logoImage {
     width: 15%;
     height: auto;
     margin: 0 auto;
     min-width: 10rem;
+  }
+}
+
+.addEmployee {
+  color: #007782;
+  background: transparent;
+  border: none;
+  box-shadow: 4px 2px 5px #822167;
+  margin: 2% 0;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.employeeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input[type="text"] {
+    width: 50%;
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #007782;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #822167;
+    font-size: 2.4rem;
+    margin: 1% 0;
+  }
+  label {
+    cursor: pointer;
+    background: #007782;
+    color: #FFFFFF;
+    padding: 1% 2%;
+    margin: 1%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+    &:checked + label {
+      background: #033a40;
+      color: #ffffff;
+      box-shadow: 4px 2px 5px #822167;
+      font-weight: bolder;
+    }
+  }
+
+  button {
+    color: #007782;
+    background: transparent;
+    border: none;
+    box-shadow: 4px 2px 5px #822167;
+    margin: 2% 0;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    padding: 2%;
+    cursor: pointer;
   }
 }
