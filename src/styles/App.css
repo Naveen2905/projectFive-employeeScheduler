@@ -322,9 +322,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url(../assets/formbg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.employeeForm input[type="text"], .employeeForm input[type=email] {
+.employeeForm input[type="text"],
+.employeeForm input[type="email"] {
   width: 50%;
   padding: 6px 12px;
   line-height: 1.4;
@@ -334,6 +338,7 @@ a {
   border: 1px solid #822167;
   font-size: calc(1.5rem + 0.5vw);
   margin: 1% 0;
+  text-transform: capitalize;
 }
 
 .employeeForm label {
@@ -363,7 +368,90 @@ a {
 
 .employeeForm .submitData {
   color: #007782;
-  background: transparent;
+  background: #007782;
+  border: none;
+  -webkit-box-shadow: 4px 2px 5px #822167;
+          box-shadow: 4px 2px 5px #822167;
+  margin: 2% 0;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 0 2%;
+}
+
+.mainContainer {
+  background: url(../assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.mainContainer .timeCardsArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mainContainer .timeCardsArea .timeCard {
+  width: calc((100% / 3) - 4%);
+  margin: 2%;
+  border: 1px solid #007782;
+  padding: 2%;
+  -webkit-box-shadow: 4px 2px 5px #822167;
+          box-shadow: 4px 2px 5px #822167;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mainContainer .timeCardsArea .timeCard h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #033a40;
+}
+
+.mainContainer .timeCardsArea .timeCard .allDays {
+  margin: 2% auto;
+}
+
+.mainContainer .timeCardsArea .timeCard .allDays li {
+  font-size: 1.6rem;
+  margin: 1%;
+  text-transform: capitalize;
+  color: #033a40;
+}
+
+.mainContainer .timeCardsArea .timeCard .emailButton {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  -webkit-box-shadow: 4px 2px 5px #822167;
+          box-shadow: 4px 2px 5px #822167;
+  margin: 2% 0;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mainContainer .timeCardsArea .timeCard .deleteCard {
+  color: #ffffff;
+  background: rgba(130, 33, 103, 0.4);
   border: none;
   -webkit-box-shadow: 4px 2px 5px #822167;
           box-shadow: 4px 2px 5px #822167;

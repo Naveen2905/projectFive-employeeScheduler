@@ -31,13 +31,19 @@ class Main extends Component {
     }
 
     updateParentState = (e) => {
-        this.props.updateParentState(e,this.state.nameInput,this.state.emailInput,this.state.days);
+        this.props.updateParentState(e, this.state.nameInput, this.state.emailInput, this.state.days);
+
+        this.setState({
+            showForm: false,
+            nameInput:'',
+            emailInput:'',
+        })
     }
 
     showForm = () => {
 
         return (
-            <div className= 'wrapper'>
+            <div className='wrapper'>
                 <form action="submit" className="employeeForm" onSubmit={this.handleFormSubmit}>
                     <input type="text" placeholder="Employee Name" onChange={this.nameHandleChange} value={this.state.nameInput} />
 

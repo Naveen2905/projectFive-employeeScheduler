@@ -38,7 +38,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  input[type="text"], input[type=email] {
+  background: url(../assets/formbg.jpg);
+  background-size: cover;
+  background-position: center;
+  input[type="text"],
+  input[type="email"] {
     width: 50%;
     padding: 6px 12px;
     line-height: 1.4;
@@ -48,6 +52,7 @@
     border: 1px solid #822167;
     font-size: calc(1.5rem + 0.5vw);
     margin: 1% 0;
+    text-transform: capitalize;
   }
   label {
     cursor: pointer;
@@ -69,18 +74,76 @@
       font-weight: bolder;
     }
   }
-  .submitData{
+  .submitData {
     color: #007782;
-    background: transparent;
+    background: #007782;
     border: none;
     box-shadow: 4px 2px 5px #822167;
     margin: 2% 0;
     font-size: 1.6rem;
     border-radius: 10px;
     cursor: pointer;
+    color: #ffffff;
+    padding: 0 2%;
   }
 }
 
-.timeCard {
-  
+.mainContainer {
+  background: url(../assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  .timeCardsArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // background: rgba(40,44,52,0.2);
+
+    .timeCard {
+      width: calc((100% / 3) - 4%);
+      margin: 2%;
+      border: 1px solid #007782;
+      padding: 2%;
+      box-shadow: 4px 2px 5px #822167;
+      font-size: 1.6rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h3 {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: #033a40;
+      }
+      .allDays {
+        margin: 2% auto;
+        li {
+          font-size: 1.6rem;
+          margin: 1%;
+          text-transform: capitalize;
+          color: #033a40;
+        }
+      }
+      .emailButton {
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.4);
+        border: none;
+        box-shadow: 4px 2px 5px #822167;
+        margin: 2% 0;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .deleteCard {
+        color: #ffffff;
+        background: rgba(130, 33, 103, 0.4);
+        border: none;
+        box-shadow: 4px 2px 5px #822167;
+        margin: 2% 0;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
 }
