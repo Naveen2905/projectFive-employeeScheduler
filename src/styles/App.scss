@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #FFFFFF;
+  color: #ffffff;
   .logoImage {
     width: 15%;
     height: auto;
@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  input[type="text"] {
+  input[type="text"], input[type=email] {
     width: 50%;
     padding: 6px 12px;
     line-height: 1.4;
@@ -46,17 +46,18 @@
     border-radius: 4px;
     background: transparent;
     border: 1px solid #822167;
-    font-size: 2.4rem;
+    font-size: calc(1.5rem + 0.5vw);
     margin: 1% 0;
   }
   label {
     cursor: pointer;
     background: #007782;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 1% 2%;
     margin: 1%;
     border-radius: 10px;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 5px -2px 5px #822167;
   }
 
   input[type="checkbox"] {
@@ -64,12 +65,11 @@
     &:checked + label {
       background: #033a40;
       color: #ffffff;
-      box-shadow: 4px 2px 5px #822167;
+      box-shadow: 2px 1px 5px #822167;
       font-weight: bolder;
     }
   }
-
-  button {
+  .submitData{
     color: #007782;
     background: transparent;
     border: none;
@@ -77,7 +77,10 @@
     margin: 2% 0;
     font-size: 1.6rem;
     border-radius: 10px;
-    padding: 2%;
     cursor: pointer;
   }
+}
+
+.timeCard {
+  
 }

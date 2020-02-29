@@ -8,11 +8,11 @@ class Main extends Component {
             showForm: false,
             nameInput: '',
             emailInput: '',
+            days: [],
         }
     }
 
     nameHandleChange = (e) => {
-        // console.log(e.target.value);
         this.setState({
             nameInput: e.target.value,
         })
@@ -24,19 +24,24 @@ class Main extends Component {
         })
     }
 
-    onCheckChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.checked,
-        })
+    onCheckChange = e => {
+        const set = new Set(this.state.days);
+        e.target.checked ? set.add(e.target.name) : set.delete(e.target.name);
+        this.setState({ days: [...set] });
+    }
+
+    updateParentState = (e) => {
+        this.props.updateParentState(e,this.state.nameInput,this.state.emailInput,this.state.days);
     }
 
     showForm = () => {
+
         return (
-            <div>
-                <form action="submit" className="employeeForm">
+            <div className= 'wrapper'>
+                <form action="submit" className="employeeForm" onSubmit={this.handleFormSubmit}>
                     <input type="text" placeholder="Employee Name" onChange={this.nameHandleChange} value={this.state.nameInput} />
 
-                    <input type="text" placeholder="Email Address" onChange={this.emailHandleChange} value={this.state.emailInput} />
+                    <input type="email" placeholder="Email Address" onChange={this.emailHandleChange} value={this.state.emailInput} />
 
                     <input type="checkbox" id="monday" name="monday"
                         onChange={this.onCheckChange} />
@@ -58,7 +63,7 @@ class Main extends Component {
                         onChange={this.onCheckChange} />
                     <label htmlFor="friday">Friday </label>
 
-                    <button type="submit">Create Time Card</button>
+                    <button type="submit" className='submitData' onClick={this.updateParentState}>Confirm!</button>
                 </form>
             </div>
         )
