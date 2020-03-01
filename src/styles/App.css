@@ -305,6 +305,8 @@ a {
   -webkit-box-shadow: 4px 2px 5px #822167;
           box-shadow: 4px 2px 5px #822167;
   margin: 2% 0;
+  font-family: "Merienda One";
+  font-weight: 700;
   font-size: 1.6rem;
   border-radius: 10px;
   padding: 2%;
@@ -336,17 +338,38 @@ a {
   border-radius: 4px;
   background: transparent;
   border: 1px solid #822167;
+  font-family: "Merienda One";
   font-size: calc(1.5rem + 0.5vw);
   margin: 1% 0;
   text-transform: capitalize;
 }
 
-.employeeForm label {
+.employeeForm input[type=email] {
+  text-transform: lowercase;
+}
+
+.employeeForm .labelContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2% 0;
+}
+
+.employeeForm .labelContainer label {
   cursor: pointer;
   background: #007782;
   color: #ffffff;
   padding: 1% 2%;
   margin: 1%;
+  font-family: "Merienda One";
   border-radius: 10px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -354,11 +377,11 @@ a {
           box-shadow: 5px -2px 5px #822167;
 }
 
-.employeeForm input[type="checkbox"] {
+.employeeForm .labelContainer input[type="checkbox"] {
   visibility: hidden;
 }
 
-.employeeForm input[type="checkbox"]:checked + label {
+.employeeForm .labelContainer input[type="checkbox"]:checked + label {
   background: #033a40;
   color: #ffffff;
   -webkit-box-shadow: 2px 1px 5px #822167;
@@ -368,11 +391,12 @@ a {
 
 .employeeForm .submitData {
   color: #007782;
-  background: #007782;
+  background: #822167;
   border: none;
-  -webkit-box-shadow: 4px 2px 5px #822167;
-          box-shadow: 4px 2px 5px #822167;
+  -webkit-box-shadow: 4px 2px 5px #007782;
+          box-shadow: 4px 2px 5px #007782;
   margin: 2% 0;
+  font-family: "Merienda One";
   font-size: 1.6rem;
   border-radius: 10px;
   cursor: pointer;
@@ -406,6 +430,7 @@ a {
   padding: 2%;
   -webkit-box-shadow: 4px 2px 5px #822167;
           box-shadow: 4px 2px 5px #822167;
+  font-family: "Merienda One";
   font-size: 1.6rem;
   border-radius: 10px;
   display: -webkit-box;
@@ -421,9 +446,10 @@ a {
 }
 
 .mainContainer .timeCardsArea .timeCard h3 {
+  font-family: "Merienda One";
   font-size: 2rem;
   text-transform: capitalize;
-  color: #033a40;
+  color: #007782;
 }
 
 .mainContainer .timeCardsArea .timeCard .allDays {
@@ -431,10 +457,11 @@ a {
 }
 
 .mainContainer .timeCardsArea .timeCard .allDays li {
+  font-family: "Merienda One";
   font-size: 1.6rem;
-  margin: 1%;
+  margin: 2%;
   text-transform: capitalize;
-  color: #033a40;
+  color: #007782;
 }
 
 .mainContainer .timeCardsArea .timeCard .emailButton {
@@ -444,6 +471,7 @@ a {
   -webkit-box-shadow: 4px 2px 5px #822167;
           box-shadow: 4px 2px 5px #822167;
   margin: 2% 0;
+  font-family: "Merienda One";
   font-size: 1.6rem;
   border-radius: 10px;
   cursor: pointer;
@@ -456,6 +484,7 @@ a {
   -webkit-box-shadow: 4px 2px 5px #822167;
           box-shadow: 4px 2px 5px #822167;
   margin: 2% 0;
+  font-family: "Merienda One";
   font-size: 1.6rem;
   border-radius: 10px;
   cursor: pointer;

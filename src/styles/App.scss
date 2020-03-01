@@ -28,6 +28,8 @@
   border: none;
   box-shadow: 4px 2px 5px #822167;
   margin: 2% 0;
+  font-family: "Merienda One";
+  font-weight: 700;
   font-size: 1.6rem;
   border-radius: 10px;
   padding: 2%;
@@ -50,36 +52,50 @@
     border-radius: 4px;
     background: transparent;
     border: 1px solid #822167;
+    font-family: "Merienda One";
     font-size: calc(1.5rem + 0.5vw);
     margin: 1% 0;
     text-transform: capitalize;
   }
-  label {
-    cursor: pointer;
-    background: #007782;
-    color: #ffffff;
-    padding: 1% 2%;
-    margin: 1%;
-    border-radius: 10px;
-    transition: all 0.2s ease-in;
-    box-shadow: 5px -2px 5px #822167;
+  input[type=email]{
+    text-transform: lowercase;
   }
-
-  input[type="checkbox"] {
-    visibility: hidden;
-    &:checked + label {
-      background: #033a40;
+  .labelContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2% 0;
+    label {
+      cursor: pointer;
+      background: #007782;
       color: #ffffff;
-      box-shadow: 2px 1px 5px #822167;
-      font-weight: bolder;
+      padding: 1% 2%;
+      margin: 1%;
+      font-family: "Merienda One";
+      border-radius: 10px;
+      transition: all 0.2s ease-in;
+      box-shadow: 5px -2px 5px #822167;
+    }
+
+    input[type="checkbox"] {
+      visibility: hidden;
+      &:checked + label {
+        background: #033a40;
+        color: #ffffff;
+        box-shadow: 2px 1px 5px #822167;
+        font-weight: bolder;
+      }
     }
   }
   .submitData {
     color: #007782;
-    background: #007782;
+    // background: #007782;
+    background: #822167;
     border: none;
-    box-shadow: 4px 2px 5px #822167;
+    box-shadow: 4px 2px 5px #007782;
     margin: 2% 0;
+    font-family: "Merienda One";
     font-size: 1.6rem;
     border-radius: 10px;
     cursor: pointer;
@@ -97,31 +113,32 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // background: rgba(40,44,52,0.2);
-
     .timeCard {
       width: calc((100% / 3) - 4%);
       margin: 2%;
       border: 1px solid #007782;
       padding: 2%;
       box-shadow: 4px 2px 5px #822167;
+      font-family: "Merienda One";
       font-size: 1.6rem;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       h3 {
+        font-family: "Merienda One";
         font-size: 2rem;
         text-transform: capitalize;
-        color: #033a40;
+        color: #007782;
       }
       .allDays {
         margin: 2% auto;
         li {
+          font-family: "Merienda One";
           font-size: 1.6rem;
-          margin: 1%;
+          margin: 2%;
           text-transform: capitalize;
-          color: #033a40;
+          color: #007782;
         }
       }
       .emailButton {
@@ -130,6 +147,7 @@
         border: none;
         box-shadow: 4px 2px 5px #822167;
         margin: 2% 0;
+        font-family: "Merienda One";
         font-size: 1.6rem;
         border-radius: 10px;
         cursor: pointer;
@@ -140,6 +158,7 @@
         border: none;
         box-shadow: 4px 2px 5px #822167;
         margin: 2% 0;
+        font-family: "Merienda One";
         font-size: 1.6rem;
         border-radius: 10px;
         cursor: pointer;
