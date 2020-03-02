@@ -3,7 +3,7 @@ import './styles/App.css';
 
 import { Motion, spring } from 'react-motion';
 import axios from 'axios';
-
+import schedule from './assets/noun_schedule_346777.png'
 import Header from './components/Header';
 import Main from './components/Main'
 import firebase from './components/firebase';
@@ -54,23 +54,6 @@ class App extends Component {
       })
     })
 
-    const apiKey = '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';
-
-    // axios({
-    //   url: 'https://api.sendgrid.com/v3/mail/send',
-    //   method: 'POST',
-    //   responseType: 'json',
-    //   params: {
-    //     key: apiKey,
-    //   },
-    //   body: {
-    //     "personalizations": [{ "to": [{ "email": `${timeCardData}`, "name": "test" }], "subject": "Hello, Naveen!" }],
-
-    //     "content": [{ "type": "text/plain", "value": "Heya!" }],
-
-    //     "from": { "email": "naveenmalhotra05@gmail.com", "name": "NAV" }
-    //   }
-    // })
   }
 
   removeCard = (toykey) => {
@@ -78,10 +61,54 @@ class App extends Component {
     dbRef.child(toykey).remove();
   }
 
-  sendEmail = () => {
-    this.state.cardInfo.map((eachCard, index) => {
-      console.log(eachCard.allData.employeeEmail);
-    })}
+  sendEmail = (e) => {
+    const emailValue = e.target.value;
+    console.log(emailValue);
+
+    // axios({
+    //   url: `https://api.sendgrid.com/v3/mail/send`,
+    //   method: `POST`,
+    //   responseType: `json`,
+    //   params: {
+    //     key: `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`
+    //   },
+    //   data: {
+    //     "personalizations": [
+    //         {
+    //             "to": [
+    //                 {
+    //                     "email": "naveenmalhotra05@gmail.com",
+    //                     "name": "test"
+    //                 }
+    //             ],
+    //             "subject": "Hello, Naveen!"
+    //         }
+    //     ],
+    //     "content": [
+    //         {
+    //             "type": "text/plain",
+    //             "value": "Heya!"
+    //         }
+    //     ],
+    //     "from": {
+    //         "email": "naveenmalhotra05@gmail.com",
+    //         "name": "nav "
+    //     }
+    // },
+    // })
+
+    // fetch('https://api.sendgrid.com/v3/mail/send', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Authorization': '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',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(
+    //     { "personalizations": [{ "to": [{ "email": "naveenmalhotra05@gmail.com" }], "subject": "Hello, World!" }], "from": { "email": "naveenmalhotra05@gmail.com" }, "content": [{ "type": "text/plain", "value": "Hello, World!" }] }
+    //   ),
+    // })
+
+  }
 
   render() {
     return (
@@ -89,15 +116,17 @@ class App extends Component {
         <Header></Header>
         <Main updateParentState={this.updateState} ></Main>
 
-        <Motion defaultStyle={{ x: -500, opacity: 0 }} style={{ x: spring(0), opacity: spring(1) }}>
-          {(style) => (
 
-            <div className='wrapper mainContainer' style={{ transform: `translateX(${style.x}px)`, opacity: style.opacity }}>
-              <div className='timeCardsArea'>
-                {
-                  this.state.cardInfo.map((eachCard, index) => {
-                    return (
-                      <div className='timeCard' key={eachCard.key}>
+
+        <div className='wrapper mainContainer'>
+          <div className='timeCardsArea'>
+            {
+              this.state.cardInfo.map((eachCard, index) => {
+                return (
+                  <Motion defaultStyle={{ y: -500, opacity: 0 }} style={{ y: spring(0), opacity: spring(1) }}>
+                    {(style) => (
+                      <div className='timeCard' key={eachCard.key}  style={{ transform: `translateY(${style.y}px)`, opacity: style.opacity }}>
+                        <div className='scheduleLogo'><img src={schedule} alt="schedule by Chameleon Design from the Noun Project"/></div>
                         <h3>{eachCard.allData.employeeName}</h3>
                         <div className='allDays'>
                           {
@@ -108,16 +137,17 @@ class App extends Component {
                             })
                           }
                         </div>
-                        <button className='emailButton' href={`mailto:${eachCard.allData.employeeEmail}`} onClick={this.sendEmail} >Dynamic Email Button</button>
+                        <button className='emailButton' href={`mailto:${eachCard.allData.employeeEmail}`} onClick={this.sendEmail} value={`${eachCard.allData.employeeEmail}`} >Dynamic Email Button</button>
                         <button className='deleteCard' onClick={() => { this.removeCard(eachCard.key) }}>Delete!</button>
                       </div>
-                    )
-                  })
-                }
-              </div>
-            </div>
-          )}
-        </Motion>
+                    )}
+                  </Motion>
+                )
+              })
+            }
+          </div>
+        </div>
+
       </div>
     );
   }
