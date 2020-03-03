@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import TimeRangePicker from '@wojtekmaj/react-timerange-picker'
 class Main extends Component {
     constructor() {
         super()
@@ -9,6 +10,7 @@ class Main extends Component {
             nameInput: '',
             emailInput: '',
             days: [],
+            time: ['8:00', '5:00'],
         }
     }
 
@@ -31,7 +33,7 @@ class Main extends Component {
     }
 
     updateParentState = (e) => {
-        this.props.updateParentState(e, this.state.nameInput, this.state.emailInput, this.state.days);
+        this.props.updateParentState(e, this.state.nameInput, this.state.emailInput, this.state.days, this.state.time);
 
         this.setState({
             showForm: false,
@@ -39,6 +41,8 @@ class Main extends Component {
             emailInput: '',
         })
     }
+
+    onTimeChange = time => this.setState({ time })
 
     showForm = () => {
 
@@ -49,6 +53,11 @@ class Main extends Component {
 
                     <input type="email" placeholder="Email Address" onChange={this.emailHandleChange} value={this.state.emailInput} required />
 
+                    <div>
+                        <TimeRangePicker className={"timePicker"} clockIcon={null} format={"hh:mm a"} onChange={this.onTimeChange}
+                            value={this.state.time}
+                        />
+                    </div>
                     <div className='labelContainer'>
                         <input type="checkbox" id="monday" name="monday"
                             onChange={this.onCheckChange} />

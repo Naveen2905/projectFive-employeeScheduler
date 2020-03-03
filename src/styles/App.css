@@ -298,6 +298,15 @@ a {
   min-width: 10rem;
 }
 
+.App-header h1 {
+  font-family: "Merienda One";
+  font-weight: 700;
+  font-size: calc(1.6rem + 0.5vw);
+  color: #ffffff;
+  margin: 2% 0;
+  text-shadow: 4px 2px 5px #822167;
+}
+
 .addEmployee {
   color: #007782;
   background: transparent;
@@ -344,8 +353,15 @@ a {
   text-transform: capitalize;
 }
 
-.employeeForm input[type=email] {
+.employeeForm input[type="email"] {
   text-transform: lowercase;
+}
+
+.employeeForm .timePicker {
+  border: 1px solid #822167;
+  font-family: "Merienda One";
+  font-size: calc(1.2rem + 0.5vw);
+  border-radius: 4px;
 }
 
 .employeeForm .labelContainer {
@@ -408,7 +424,7 @@ a {
   background: url(../assets/bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .mainContainer .timeCardsArea {
@@ -421,6 +437,7 @@ a {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 2% 0;
 }
 
 .mainContainer .timeCardsArea .timeCard {
@@ -462,6 +479,15 @@ a {
   color: #007782;
 }
 
+.mainContainer .timeCardsArea .timeCard .timingStyle {
+  font-family: "Merienda One";
+  font-size: calc(1.2rem + 0.5vw);
+  margin: 2%;
+  text-transform: capitalize;
+  color: #033a40;
+  text-shadow: 4px 2px 2px #822167;
+}
+
 .mainContainer .timeCardsArea .timeCard .allDays {
   margin: 2% auto;
 }
@@ -498,5 +524,46 @@ a {
   font-size: calc(1.2rem + 0.5vw);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.footerContainer .socialIcons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.footerContainer .socialIcons li {
+  margin: auto 10px;
+}
+
+.footerContainer .socialIcons li a {
+  display: inline-block;
+  font-size: 3rem;
+  width: 100px;
+  color: #ffb100;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotateY(15deg);
+          transform: rotateY(15deg);
+  text-shadow: 10px 0px 5px #808080, 10px 0px 1px #808080, 10px 0px 1px #808080, 10px 0px 1px #808080;
+}
+
+.footerContainer .socialIcons li a:hover {
+  color: #684701;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  text-shadow: 0px 0px 1px #131313, 0px 0px 1px #070707, 0px 0px 1px black, 0px 0px 1px black;
 }
 /*# sourceMappingURL=App.css.map */
