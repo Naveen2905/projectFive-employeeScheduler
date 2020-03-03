@@ -68,6 +68,7 @@ class App extends Component {
   sendEmail = (e) => {
     const emailValue = e.target.value;
     this.state.cardInfo.map((card) => {
+
       if (card.allData.employeeEmail === emailValue) {
         const newTimeArray = card.allData.timings
         const newDaysArray = card.allData.weekDays
@@ -132,7 +133,7 @@ class App extends Component {
                             })
                           }
                         </div>
-                        <button className='emailButton' name={`${eachCard.allData.employeeName}`} onClick={this.sendEmail} value={`${eachCard.allData.employeeEmail}`} >Send Email 🤓</button>
+                        <button className='emailButton' name={`${eachCard.allData.employeeName}`} onClick={this.sendEmail} value={`${eachCard.allData.employeeEmail}`} >Send Email <span aria-label="Nerdy-happy-face" role='img'>🤓</span></button>
 
                         <button className='deleteCard' onClick={() => { this.removeCard(eachCard.key) }}>Delete!</button>
                       </div>
