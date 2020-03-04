@@ -595,6 +595,13 @@ a {
   text-shadow: 0px 0px 1px #131313, 0px 0px 1px #070707, 0px 0px 1px black, 0px 0px 1px black;
 }
 
+.footerContainer .copyright {
+  font-size: calc(1rem + 0.5vw);
+  font-family: "Merienda One";
+  color: #ffffff;
+  margin: 1% 0;
+}
+
 @media (max-width: 480px) {
   .mainContainer .timeCardsArea .timeCard {
     width: calc((100% / 2) - 4%);
