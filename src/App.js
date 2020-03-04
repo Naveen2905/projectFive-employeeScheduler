@@ -117,7 +117,7 @@ class App extends Component {
             {
               this.state.cardInfo.map((eachCard, index) => {
                 return (
-                  <Motion defaultStyle={{ y: -500, opacity: 0.4 }} style={{ y: spring(0.5), opacity: spring(1) }} key={index}>
+                  <Motion defaultStyle={{ y: -200, opacity: 0.5 }} style={{ y: spring(0), opacity: spring(1) }} key={index}>
                     {(style) => (
                       <div className='timeCard' key={eachCard.key} style={{ transform: `translateY(${style.y}px)`, opacity: style.opacity }}>
                         <div className='scheduleLogo'><img src={schedule} alt="schedule by Chameleon Design from the Noun Project" /></div>
