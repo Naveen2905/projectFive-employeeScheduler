@@ -40,7 +40,6 @@ class App extends Component {
     const dbref = firebase.database().ref()
     dbref.on('value', (response) => {
       const timeCardData = response.val();
-      console.log(timeCardData);
 
       const stateToBeSet = [];
 
@@ -51,7 +50,6 @@ class App extends Component {
         }
         stateToBeSet.push(timeCardInfo)
       }
-      console.log(stateToBeSet);
       this.setState({
         cardInfo: stateToBeSet,
       })
@@ -68,6 +66,7 @@ class App extends Component {
   sendEmail = (e) => {
     const emailValue = e.target.value;
     this.state.cardInfo.map((card) => {
+      console.log(card);
 
       if (card.allData.employeeEmail === emailValue) {
         const newTimeArray = card.allData.timings

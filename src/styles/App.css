@@ -320,6 +320,14 @@ a {
   border-radius: 10px;
   padding: 2%;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.addEmployee:hover,
+.addEmployee :focus {
+  -webkit-box-shadow: 4px 8px 10px #822167;
+          box-shadow: 4px 8px 10px #822167;
 }
 
 .employeeForm {
@@ -421,10 +429,9 @@ a {
 }
 
 .mainContainer {
-  background: url(../assets/bg.jpg);
+  background: url(../assets/bg2.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
 .mainContainer .timeCardsArea {
@@ -463,6 +470,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .mainContainer .timeCardsArea .timeCard .scheduleLogo {
@@ -485,7 +494,6 @@ a {
   margin: 2%;
   text-transform: capitalize;
   color: #033a40;
-  text-shadow: 4px 2px 2px #822167;
 }
 
 .mainContainer .timeCardsArea .timeCard .allDays {
@@ -511,6 +519,12 @@ a {
   font-size: calc(1.2rem + 0.5vw);
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainContainer .timeCardsArea .timeCard .emailButton:hover, .mainContainer .timeCardsArea .timeCard .emailButton :focus {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .mainContainer .timeCardsArea .timeCard .deleteCard {
@@ -524,6 +538,20 @@ a {
   font-size: calc(1.2rem + 0.5vw);
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainContainer .timeCardsArea .timeCard .deleteCard:hover, .mainContainer .timeCardsArea .timeCard .deleteCard :focus {
+  background: rgba(130, 33, 103, 0.8);
+}
+
+.mainContainer .timeCardsArea .timeCard:hover,
+.mainContainer .timeCardsArea .timeCard :focus {
+  -webkit-box-shadow: 4px 6px 8px #822167;
+          box-shadow: 4px 6px 8px #822167;
+  border-bottom: 2px solid #ffb100;
+  border-right: 2px solid #ffb100;
 }
 
 .footerContainer .socialIcons {
@@ -569,7 +597,7 @@ a {
 
 @media (max-width: 480px) {
   .mainContainer .timeCardsArea .timeCard {
-    width: calc((100%/2) - 4%);
+    width: calc((100% / 2) - 4%);
     margin: 2%;
   }
 }
