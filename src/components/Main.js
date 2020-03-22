@@ -59,8 +59,7 @@ class Main extends Component {
                         />
                     </div>
                     <div className='labelContainer'>
-                        <input type="checkbox" id="monday" name="monday"
-                            onChange={this.onCheckChange} />
+                        <input type="checkbox" id="monday" name="monday" onChange={this.onCheckChange} />
                         <label htmlFor="monday">Monday </label>
 
                         <input type="checkbox" id="tuesday" name="tuesday"

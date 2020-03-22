@@ -127,7 +127,8 @@ class App extends Component {
                         <p className='timingStyle'>{eachCard.allData.timings[0]} - {eachCard.allData.timings[1]}</p>
                         <div className='allDays'>
                           {
-                            eachCard.allData.weekDays.map((day, i) => {
+                            
+                            eachCard.allData.weekDays.map((day, i) => {                          
                               return (
                                 <li key={i}>{day}</li>
                               )
