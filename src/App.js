@@ -47,9 +47,9 @@ class App extends Component {
         const timeCardInfo = {
           key: key,
           allData: timeCardData[key],
-        }        
+        }
         stateToBeSet.push(timeCardInfo)
-      }      
+      }
       this.setState({
         cardInfo: stateToBeSet,
       })
@@ -67,7 +67,6 @@ class App extends Component {
     const emailValue = e.target.value;
 
     this.state.cardInfo.map((card) => {
-
       if (card.allData.employeeEmail === emailValue) {
         const newTimeArray = card.allData.timings
         const newDaysArray = card.allData.weekDays
@@ -116,7 +115,6 @@ class App extends Component {
           <div className='timeCardsArea'>
             {
               this.state.cardInfo.map((eachCard, index) => {
-                const weekDaysArray = eachCard.allData.weekDays;
                 return (
                   <Motion defaultStyle={{ y: -100, opacity: 0.5 }} style={{ y: spring(0), opacity: spring(1) }} key={index}>
                     {(style) => (
@@ -126,11 +124,11 @@ class App extends Component {
                         <p className='timingStyle'>{eachCard.allData.timings[0]} - {eachCard.allData.timings[1]}</p>
                         <div className='allDays'>
                           {
-                            eachCard.allData.weekDays.map((day, i) => {
+                            eachCard.allData.weekDays ? eachCard.allData.weekDays.map((day, i) => {
                               return (
                                 <li key={i}>{day}</li>
                               )
-                            })
+                            }) : '⛔ No weekdays entered ⛔'
                           }
                         </div>
                         <button className='emailButton' name={`${eachCard.allData.employeeName}`} onClick={this.sendEmail} value={`${eachCard.allData.employeeEmail}`} >Send Email <span aria-label="Nerdy-happy-face" role='img'>🤓</span></button>
