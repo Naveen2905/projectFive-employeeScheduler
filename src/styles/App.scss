@@ -73,12 +73,17 @@
   input[type="email"] {
     text-transform: lowercase;
   }
+  
   .timePicker {
     border: 1px solid #822167;
     font-family: "Merienda One";
     font-size: calc(1.2rem + 0.5vw);
     border-radius: 4px;
+    .react-timerange-picker__clear-button { 
+      display: none;
+    }
   }
+
   .labelContainer {
     width: 100%;
     display: flex;
