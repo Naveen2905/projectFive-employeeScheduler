@@ -372,6 +372,10 @@ a {
   border-radius: 4px;
 }
 
+.employeeForm .timePicker .react-timerange-picker__clear-button {
+  display: none;
+}
+
 .employeeForm .labelContainer {
   width: 100%;
   display: -webkit-box;
