@@ -16,7 +16,7 @@
     "emailjs-com": "^2.4.1",
     "firebase": "^7.9.2",
     "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-motion": "^0.5.2",
